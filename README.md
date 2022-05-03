@@ -1,6 +1,29 @@
 # IMTransformer
 Transform IMages to data which can be used to train AI models. Thanks to https://github.com/Arlen0615/Convert-own-data-to-MNIST-format.
 
+### Check the format of MNIST dataset
+```python
+
+
+train_data = torchvision.datasets.MNIST(root = "mnist",
+                           train = True,
+                           transform = torchvision.transforms.ToTensor(),
+                           download = True)
+ 
+
+test_data = torchvision.datasets.MNIST(root = "mnist",
+                           train = False,
+                           transform = torchvision.transforms.ToTensor(),
+                           download = True)
+ 
+print(train_data)
+print("size=", len(train_data))
+print("")
+print(test_data)
+print("size=", len(test_data))
+
+```
+
 ### About the convert_to_mnist_format.py 
 
 Core method of reading image is : (pip install imageio)
