@@ -37,10 +37,22 @@ Before runing the script, you should make the directories look like this:
 |  |   ├─xx.jpg
 |  |   ├─xx.png
 │  ├─class-label-name2
-|  |   ├─xx.png
-|  |   ├─xx.jpg
+       ├─xx.png
+       ├─xx.jpg
 ```
 
+Output is like this in a new created floder called `convert_MNIST` after you run the script and `gzip *ubyte`:
+
+```
+t10k-images-idx3-ubyte
+t10k-images-idx3-ubyte.gz
+t10k-labels-idx1-ubyte
+t10k-labels-idx1-ubyte.gz
+train-images-idx3-ubyte
+train-images-idx3-ubyte.gz
+train-labels-idx1-ubyte
+train-labels-idx1-ubyte.gz
+```
 
 
 Core method of reading image is : (pip install imageio)
