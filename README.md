@@ -26,6 +26,23 @@ print("size=", len(test_data))
 
 ### About the convert_to_mnist_format.py 
 
+Before runing the script, you should make the directories look like this:
+
+```
+├─Origin-NonMnistFormat
+│  ├─class-label-name0
+|  |   ├─xx.png
+|  |   ├─xx.png
+│  ├─class-label-name1
+|  |   ├─xx.jpg
+|  |   ├─xx.png
+│  ├─class-label-name2
+|  |   ├─xx.png
+|  |   ├─xx.jpg
+```
+
+
+
 Core method of reading image is : (pip install imageio)
 
 ```python
