@@ -1,5 +1,5 @@
 # IMTransformer
-transform images to data which can be used to train AI models
+Transform IMages to data which can be used to train AI models. Thanks to https://github.com/Arlen0615/Convert-own-data-to-MNIST-format.
 
 ### About the convert_to_mnist_format.py 
 
