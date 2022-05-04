@@ -82,6 +82,33 @@ As you know, the code above creates a dataset called "MNIST", but "MNIST" does n
 ```
 `Put your new created MNIST-format files into the raw directory`, the settting `download=True` will automatically create something about "processed" and "training.pt","test.pt" in it. Also if you just put \*.gz into "raw", it will uncompress them. So well finished , keep going with your model.
 
+### Have a test
+
+Since you have finished the last step, try the following codes to see if the data compressed by the uppper method can be correctly reshow, if the image can be shown, then we can use it safely.
+```
+import torchvision
+from PIL import Image
+import numpy as np
+import matplotlib.pyplot as plt
+
+test_data = torchvision.datasets.MNIST("./data",
+                                       download=True,
+                                       train=False,
+                                       transform=torchvision.transforms.ToTensor())
+def imshow(tensor, title=None):
+    image = tensor.cpu().clone()  # we clone the tensor to not do changes on it
+    image = image.squeeze(0)  # remove the fake batch dimension
+    image = unloader(image)
+    plt.imshow(image)
+    if title is not None:
+        plt.title(title)
+    plt.pause(0.001)  # pause a bit so that plots are updated
+    
+img,label=test_data[0]
+unloader = torchvision.transforms.ToPILImage()
+imshow(img,label)
+```
+
 ### Recrusion read file :
 
 ```python
