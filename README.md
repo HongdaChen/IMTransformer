@@ -84,7 +84,7 @@ As you know, the code above creates a dataset called "MNIST", but "MNIST" does n
 
 ### Have a test
 
-Since you have finished the last step, try the following codes to see if the data compressed by the uppper method can be correctly reshow, if the image can be shown, then we can use it safely.
+Since you have finished the last step, try the following codes to see if the data compressed by the uppper method can be correctly reshown, if the image can be reshown, then we can use it safely.
 ```
 import torchvision
 from PIL import Image
