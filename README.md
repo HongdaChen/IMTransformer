@@ -63,6 +63,27 @@ image=imageio.imread(image_path+filename)
 if the image use 24bit instead of 8bit, then you can try to read one image by the above code, and `image.shape` to find that dimension, always can be averaged using `numpy.average(image,2)`, the parameter `2` stands for the last dimension of the image array.
 
 
+### How to manage these files:
+
+If you want to use the least code to train the already existing models on your own data, follow this:
+
+```python
+test_data = torchvision.datasets.MNIST("./data",
+                                       download=True,
+                                       train=False,
+                                       transform=torchvision.transforms.ToTensor())
+```
+As you know, the code above creates a dataset called "MNIST", but "MNIST" does not have to be MNIST. We still use the method `torchvision.datasets.MNIST`, `download=True`, and the folder "./data" should be like this:
+
+```
+├─MNIST
+│  └─raw
+└─AnythingElseExceptMNIST
+    ├─ ...
+    └─ ..
+```
+`Put your new created MNIST-format files into the raw directory`, the settting `download=True` will automatically create something about "processed" and "training.pt","test.pt" in it. Also if you just put \*.gz into "raw", it will uncompress them. So well finished , keep going with your model.
+
 ### Recrusion read file :
 
 ```python
