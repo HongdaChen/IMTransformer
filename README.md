@@ -73,14 +73,12 @@ test_data = torchvision.datasets.MNIST("./data",
                                        train=False,
                                        transform=torchvision.transforms.ToTensor())
 ```
-As you know, the code above creates a dataset called "MNIST", but "MNIST" does not have to be MNIST. We still use the method `torchvision.datasets.MNIST`, `download=True`, and the folder "./data" should be like this:
+As you know, the code above creates a dataset called "MNIST", but "MNIST" does not have to be MNIST. We still use the method `torchvision.datasets.MNIST`, `download=True`, and the folder "./data" should `contain` these contents:
 
 ```
 ├─MNIST
 │  └─raw
-└─AnythingElseExceptMNIST
-    ├─ ...
-    └─ ..
+
 ```
 `Put your new created MNIST-format files into the raw directory`, the settting `download=True` will automatically create something about "processed" and "training.pt","test.pt" in it. Also if you just put \*.gz into "raw", it will uncompress them. So well finished , keep going with your model.
 
