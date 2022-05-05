@@ -1,6 +1,7 @@
 # IMTransformer
 Transform IMages to data which can be used to train AI models. Thanks to https://github.com/Arlen0615/Convert-own-data-to-MNIST-format.
 
+> But len(train_data.classes) still return 10, maybe diving into the source code of `torchvision.datasets.MNIST` should be necessary.
 ### Check the format of MNIST dataset
 ```python
 
